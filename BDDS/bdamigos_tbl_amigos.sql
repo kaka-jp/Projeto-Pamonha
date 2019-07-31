@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distribute 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bdamigos
 -- ------------------------------------------------------
@@ -19,7 +19,7 @@
 -- Table structure for table `tbl_amigos`
 --
 
-DROP TABLE IF EXISTS `tbl_amigos`;
+
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tbl_amigos` (
