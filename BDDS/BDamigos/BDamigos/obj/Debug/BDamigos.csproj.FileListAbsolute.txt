@@ -1,0 +1,13 @@
+G:\BDDS\BDamigos\BDamigos\bin\Debug\BDamigos.exe.config
+G:\BDDS\BDamigos\BDamigos\bin\Debug\BDamigos.exe
+G:\BDDS\BDamigos\BDamigos\bin\Debug\BDamigos.pdb
+G:\BDDS\BDamigos\BDamigos\bin\Debug\MySql.Data.dll
+G:\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.csprojAssemblyReference.cache
+G:\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.Form1.resources
+G:\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.Properties.Resources.resources
+G:\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.csproj.GenerateResource.cache
+G:\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.csproj.CoreCompileInputs.cache
+G:\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.csproj.CopyComplete
+G:\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.exe
+G:\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.pdb
+G:\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.Form2.resources
