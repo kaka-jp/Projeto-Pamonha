@@ -10,6 +10,7 @@ package Na_raça;
  * @author Aluno
  */
 public class Desafio_11 {
+
     public static void main(String[] args) {
         String A[]= new String [8];
         String B[]= {};
@@ -19,4 +20,5 @@ public class Desafio_11 {
             A[i]= B[(int) (Math.random()*44)];
         }
     }
+
 }
