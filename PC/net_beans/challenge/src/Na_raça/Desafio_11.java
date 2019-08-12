@@ -14,11 +14,11 @@ import javax.swing.JOptionPane;
 public class Desafio_11 {
     public static void main(String[] args) {
         String A[]= new String [8];
-        String B[]= {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","x","w","y","z",};
+        String B[]= {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","x","w","y","z","ç","0","1","2","3","4","5","6","7","8","9","'","!","@","#","$","%","¨","&","*","-","+","=","´","`","[","]","ª","~","^","º",".","<",">",";",":","?","/","|"};
         String x ="";
         
         for(int i = 0; i < 8; i++){
-            A[i]= B[(int) (Math.random()*44)];
+            A[i]= B[(int) (Math.random()*63)];
         }
         
         for(int i=0;i<8;i++){
