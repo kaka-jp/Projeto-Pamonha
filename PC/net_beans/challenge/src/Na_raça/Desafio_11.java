@@ -12,5 +12,11 @@ package Na_raça;
 public class Desafio_11 {
     public static void main(String[] args) {
         String A[]= new String [8];
+        String B[]= {};
+        String x ="";
+        
+        for(int i = 0; i < 8; i++){
+            A[i]= B[(int) (Math.random()*44)];
+        }
     }
 }
