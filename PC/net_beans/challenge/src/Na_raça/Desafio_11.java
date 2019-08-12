@@ -5,12 +5,13 @@
  */
 package Na_raça;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Aluno
  */
 public class Desafio_11 {
-
     public static void main(String[] args) {
         String A[]= new String [8];
         String B[]= {};
@@ -19,6 +20,10 @@ public class Desafio_11 {
         for(int i = 0; i < 8; i++){
             A[i]= B[(int) (Math.random()*44)];
         }
+        
+        for(int i=0;i<8;i++){
+            x= A[i];
+        }
+         JOptionPane.showMessageDialog(null,"Sua senha é:" + x);
     }
-
 }
