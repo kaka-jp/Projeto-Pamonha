@@ -10,10 +10,9 @@ package Na_raça;
  * @author Aluno
  */
 public class Desafio_11 {
-    
-            public static void main(String[] args) {
-        
-                
+
+    public static void main(String[] args) {
+        String A[]= new String [8];
     }
-    
+
 }
