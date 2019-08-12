@@ -16,14 +16,15 @@ public class Desafio_11 {
         String A[]= new String [8];
         String B[]= {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","x","w","y","z","ç","0","1","2","3","4","5","6","7","8","9","'","!","@","#","$","%","¨","&","*","-","+","=","´","`","[","]","ª","~","^","º",".","<",">",";",":","?","/","|"};
         String x ="";
+        int i;
         
-        for(int i = 0; i < 8; i++){
+        for(i = 0; i < 8; i++){
             A[i]= B[(int) (Math.random()*63)];
         }
         
-        for(int i=0;i<8;i++){
-            x= A[i];
+        for(i = 0;i < 8; i++){
+            x+= A[i];
         }
-         JOptionPane.showMessageDialog(null,"Sua senha é:" + x);
+         JOptionPane.showMessageDialog(null,"Sua senha é: " + x);
     }
 }
