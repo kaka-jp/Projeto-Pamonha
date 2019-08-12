@@ -18,9 +18,7 @@ public class Desafio_9 {
         String Respostas[]= new String[10];
         String B[] ={"a","a","c","e","d","b","a","c","b","d"};
         int i,x=0;
-        //String x="";
-       
-        
+            
         for(i = 0; i < 10; i++){
      
             Respostas[i] = (JOptionPane.showInputDialog("Entre com a resposta da questão[" + (i) + "]")); 
