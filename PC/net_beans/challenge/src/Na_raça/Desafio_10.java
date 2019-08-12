@@ -22,13 +22,18 @@ public class Desafio_10 {
                 A= new String [10];
                 B= new String [20];
                 
-                for(i=0; i<20; i++){
+                for(i = 0; i < 20; i++){
                     B[i]= (JOptionPane.showInputDialog("Entre com o carro nº["+(i)+"]"));
                 }
                 
-                for()
+                for(i = 0;i < 10; i++){
+                    A[i]= B[(int) (Math.random()*20)];
+                }
                 
-                
+             for ( i = 0; i < 10; i++){
+                     x+= (A[i]+"\n");
+             }
+             JOptionPane.showMessageDialog(null,"Lista 10 de carros\n" + x);
     }
     
 }
