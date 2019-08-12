@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class Desafio_11 {
     public static void main(String[] args) {
         String A[]= new String [8];
-        String B[]= {};
+        String B[]= {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","x","w","y","z",};
         String x ="";
         
         for(int i = 0; i < 8; i++){
