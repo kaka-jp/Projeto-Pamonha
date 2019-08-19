@@ -23,6 +23,7 @@ public class Desafio_6 {
         for (i = 0; i < y; i++){
             a[i] = Integer.parseInt(JOptionPane.showInputDialog("Entre com os elementos para o Vetor[" + (i) + "]"));;
             n += (a[i]);
+            
         }
       //  for ( i = 0; i < 10; i++){
           
