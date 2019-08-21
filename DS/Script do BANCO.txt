@@ -1,0 +1,10 @@
+create database tbl_amigo;
+use tbl_amigo;
+create table tbl_lula
+(
+amg_cod int (11) not null primary key auto_increment, 
+amg_nome varchar (45) null,
+amg_telefone int (11) null,
+amg_email varchar (40) null,
+amg_CPF int (11) null
+);
