@@ -26,7 +26,7 @@ namespace BDamigos
             else
             {
                 timer1.Enabled = false;
-                frmPrincipal fPrincipal = new frmPrincipal();
+                Form1 fPrincipal = new Form1();
                 fPrincipal.Show();
                 this.Visible = false;
             }

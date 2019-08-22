@@ -27,3 +27,4 @@ F:\Have a break, have a Kit Kat\DS\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.pdb
 F:\Have a break, have a Kit Kat\DS\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.Form3.resources
 F:\Have a break, have a Kit Kat\DS\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.Form4.resources
 F:\Have a break, have a Kit Kat\DS\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.frmPrincipal.resources
+F:\Have a break, have a Kit Kat\DS\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.Form5.resources

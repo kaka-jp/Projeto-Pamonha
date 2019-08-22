@@ -63,7 +63,7 @@ namespace BDamigos
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Form2 alterar = new Form2();
+            Form5 alterar = new Form5();
             alterar.Show();
 
             Form2 visu = new Form2();
