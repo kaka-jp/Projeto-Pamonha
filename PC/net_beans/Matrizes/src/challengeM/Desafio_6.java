@@ -13,21 +13,24 @@ import javax.swing.JOptionPane;
  */
 public class Desafio_6 {
     public static void main(String[] args) {        
-       int i,j,n=0,z,y;
+       int i,j,n=0,z,y,k=0,t=0;
        String x = "";
        
        z = Integer.parseInt(JOptionPane.showInputDialog("Entre com a quantidade de Linhas da Matriz"));
        y = Integer.parseInt(JOptionPane.showInputDialog("Entre com a quantidade de Colunas da Matriz"));
        
        int C[][] = new int [z][y];
+       
        for (i=0; i<z; i++){
            for (j=0; j<y; j++){
-               C[i][j]= (int) (Math.random() *(20));
+               C[i][j]= 10 + (int) (Math.random() *10);
                x+=C[i][j]+",";
                n+=C[i][j];
+               k=z*y;
            }
+           t=n/k;
            x+="\n";
        }
-        JOptionPane.showMessageDialog(null,"A Somatória da Matriz é:"+n+"\nA matriz é \n"+x);
+        JOptionPane.showMessageDialog(null,"A Média da Matriz é:"+t+"\nA matriz é \n"+x);
     }
 }
