@@ -5,6 +5,8 @@
  */
 package challengeM;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Aluno
@@ -12,7 +14,25 @@ package challengeM;
 public class Desafio_7 {
     
     public static void main(String[] args) {
-        
+          
+       int D[][] = new int [3][3];
+       int i,j,n=0,maior=0;
+       String x = "";
+       for (i=0; i<=2; i++){
+           for (j=0; j<=2; j++){
+               D[i][j]= (int) (Math.random() * 50);
+               x+=D[i][j]+",";
+               n=D[i][j];
+               if(maior<n){
+                   maior = D[i][j];
+               }
+           }
+           
+           x+="\n";
+           
+       }
+        JOptionPane.showMessageDialog(null,"O maior numero é:"+n+"\nA matriz é \n"+x);
+    
     }
     
 }

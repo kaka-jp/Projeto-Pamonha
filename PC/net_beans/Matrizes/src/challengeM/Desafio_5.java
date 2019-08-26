@@ -22,7 +22,7 @@ public class Desafio_5 {
            for (j=0; j<=2; j++){
                D[i][j]= (int) (Math.random() * 9);
                x+=D[i][j]+",";
-               n+=D[i][j];
+               n+=D[i][j]/12;
            }
            x+="\n";
            
