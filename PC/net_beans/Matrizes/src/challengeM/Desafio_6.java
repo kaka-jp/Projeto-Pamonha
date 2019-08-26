@@ -20,9 +20,9 @@ public class Desafio_6 {
        y = Integer.parseInt(JOptionPane.showInputDialog("Entre com a quantidade de Colunas da Matriz"));
        
        int C[][] = new int [z][y];
-       for (i=0; i<=z; i++){
-           for (j=0; j<=y; j++){
-               C[i][j]= (int) (Math.random() *20);
+       for (i=0; i<z; i++){
+           for (j=0; j<y; j++){
+               C[i][j]= (int) (Math.random() *(20));
                x+=C[i][j]+",";
                n+=C[i][j];
            }
