@@ -31,7 +31,7 @@ public class Desafio_7 {
            x+="\n";
            
        }
-        JOptionPane.showMessageDialog(null,"O maior numero é:"+n+"\nA matriz é \n"+x);
+        JOptionPane.showMessageDialog(null,"O maior numero é:"+maior+"\nA matriz é \n"+x);
     
     }
     
