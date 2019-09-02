@@ -11,11 +11,12 @@ import javax.swing.JOptionPane;
  *
  * @author Aluno
  */
+
 public class Desafio_10 {
     public static void main(String[] args) {
        
        String Resposta [] = {"d","b","c","a","a","d","e","c","a","d"};
-       int i,j,h=0,n=0;
+       int i,j,n=0;
        String x = ""; 
        
        n = Integer.parseInt(JOptionPane.showInputDialog("Entre com a quantidade de Linhas da Matriz"));
@@ -24,7 +25,7 @@ public class Desafio_10 {
        
        for (i=0; i < n; i++){
            for (j=0; j < 10; j++){
-               Prateleira[i][j]= Resposta[n];          
+               Prateleira[i][j]= Resposta[j];          
                x+= Prateleira[i][j]+",";
            }
            x+= "\n";
