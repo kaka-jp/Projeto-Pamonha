@@ -37,7 +37,6 @@
             this.lblCPF = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblNome = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,13 +138,6 @@
             this.lblEmail.Size = new System.Drawing.Size(127, 20);
             this.lblEmail.TabIndex = 11;
             // 
-            // lblNome
-            // 
-            this.lblNome.Location = new System.Drawing.Point(110, 49);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(127, 20);
-            this.lblNome.TabIndex = 10;
-            // 
             // lblCodigo
             // 
             this.lblCodigo.Location = new System.Drawing.Point(110, 27);
@@ -205,6 +198,13 @@
             this.comboBox1.Size = new System.Drawing.Size(142, 21);
             this.comboBox1.TabIndex = 10;
             // 
+            // lblNome
+            // 
+            this.lblNome.Location = new System.Drawing.Point(110, 49);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(127, 20);
+            this.lblNome.TabIndex = 10;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,7 +236,6 @@
         private System.Windows.Forms.TextBox lblCPF;
         private System.Windows.Forms.TextBox lblTelefone;
         private System.Windows.Forms.TextBox lblEmail;
-        private System.Windows.Forms.TextBox lblNome;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -244,5 +243,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox lblCodigo;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox lblNome;
     }
 }

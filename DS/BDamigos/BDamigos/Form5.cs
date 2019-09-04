@@ -33,6 +33,8 @@ namespace BDamigos
                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+      
         public void carregacombo()
         {
 
@@ -45,31 +47,16 @@ namespace BDamigos
             MySqlDR.Close();
         }
 
-        private void btnVizu_Click(object sender, EventArgs e)
+        public void limpaCampos()
         {
-            try
-            {
-                carregacombo();
-                MySqlCommand SQL = new MySqlCommand("select * from tbl_lula where amg_nome=@nomePesquisado", mCon);
-                SQL.Parameters.AddWithValue("NomePesquisado", comboBox1.Text);
-                SQL.Parameters.AddWithValue("@codigo", lblCodigo.Text);
-                MySqlDataReader MySqlDR2 = SQL.ExecuteReader();
-                MySqlDR2.Read();
-                lblCodigo.Text = MySqlDR2["amg_cod"].ToString();
-                lblNome.Text = "Nome: " + MySqlDR2["amg_nome"].ToString();
-                lblTelefone.Text = "Telefone: " + MySqlDR2["amg_telefone"].ToString();
-                lblEmail.Text = "E-mail: " + MySqlDR2["amg_email"].ToString();
-                lblCPF.Text = "CPF: " + MySqlDR2["amg_CPF"].ToString();
-                groupBox1.Visible = true;
-                MySqlDR2.Close();
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("Resposta:" + erro.ToString(), "Erro",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            lblCodigo.Clear();
+            lblNome.Clear();
+            lblTelefone.Clear();
+            lblEmail.Clear();
+            lblCPF.Clear();
 
         }
+
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
@@ -81,21 +68,59 @@ namespace BDamigos
             }
         }
 
+        private void btnVizu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                MySqlCommand SQL = new MySqlCommand("select * from tbl_lula where amg_nome = @nomePesquisado", mCon);
+                SQL.Parameters.AddWithValue("NomePesquisado", comboBox1.Text);
+                SQL.Parameters.AddWithValue("@codigo", lblCodigo.Text);
+                MySqlDataReader MySqlDR2 = SQL.ExecuteReader();
+                MySqlDR2.Read();
+                lblCodigo.Text = MySqlDR2["amg_cod"].ToString();
+                lblNome.Text = MySqlDR2["amg_nome"].ToString();
+                lblTelefone.Text = MySqlDR2["amg_telefone"].ToString();
+                lblEmail.Text = MySqlDR2["amg_email"].ToString();
+                lblCPF.Text = MySqlDR2["amg_CPF"].ToString();
+                groupBox1.Visible = true;
+                MySqlDR2.Close();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Resposta:" + erro.ToString(), "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            MySqlCommand SQL = new MySqlCommand("update from tbl_lula where amg_nome = @NomePesquisado", mCon);
-            SQL.Parameters.AddWithValue("@NomePesquisado", comboBox1.Text);
-            MySqlDataReader MySqlDR2 = SQL.ExecuteReader();
-            MySqlDR2.Close();
-            comboBox1.Text = "";
-            carregacombo();
-            MySqlCommand SQL1 = new MySqlCommand("select amg_nome from tbl_amigo", mCon);
-            MySqlDataReader MySqlDR = SQL.ExecuteReader();
-            while (MySqlDR.Read())
+            try
             {
-                comboBox1.Items.Add(MySqlDR["amg_nome"].ToString());
+                MySqlCommand SQL = new MySqlCommand("update tbl_lula set amg_nome = @nome, amg_tel = @tel,"
+                    + "amg_email = @email, amg_CPF = @CPF where amg_cod = @codigo and amg_nome = @NomePesquisado", mCon);
+                SQL.Parameters.AddWithValue("@NomePesquisado", comboBox1.Text);
+                SQL.Parameters.AddWithValue("@codigo", lblCodigo.Text);
+                SQL.Parameters.AddWithValue("@nome", lblNome.Text);
+                SQL.Parameters.AddWithValue("@tel", lblTelefone.Text);
+                SQL.Parameters.AddWithValue("@email", lblEmail.Text);
+                SQL.Parameters.AddWithValue("@CPF", lblCPF.Text);
+                SQL.ExecuteNonQuery();
+
+                MessageBox.Show("Cadastro ALterado");
+                comboBox1.Text = "";
+                comboBox1.Items.Clear();
+                carregacombo();
             }
-            MySqlDR.Close();
+            catch (Exception erro)
+            {
+                MessageBox.Show("Resposta:" + erro.ToString(), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            limpaCampos();
+            btnVizu.Enabled = false;
+           
+            
         }
     }
 }
