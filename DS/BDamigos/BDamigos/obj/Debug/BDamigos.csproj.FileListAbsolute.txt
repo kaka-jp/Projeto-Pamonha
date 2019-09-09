@@ -28,3 +28,20 @@ F:\Have a break, have a Kit Kat\DS\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.For
 F:\Have a break, have a Kit Kat\DS\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.Form4.resources
 F:\Have a break, have a Kit Kat\DS\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.frmPrincipal.resources
 F:\Have a break, have a Kit Kat\DS\BDDS\BDamigos\BDamigos\obj\Debug\BDamigos.Form5.resources
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\bin\Debug\BDamigos.exe.config
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\bin\Debug\BDamigos.exe
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\bin\Debug\BDamigos.pdb
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\bin\Debug\MySql.Data.dll
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.csprojAssemblyReference.cache
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.Form1.resources
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.Form2.resources
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.Form3.resources
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.Form4.resources
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.Form5.resources
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.frmPrincipal.resources
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.Properties.Resources.resources
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.csproj.GenerateResource.cache
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.csproj.CopyComplete
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.exe
+C:\Users\Aluno\Desktop\pendrivi\DS\BDamigos\BDamigos\obj\Debug\BDamigos.pdb
