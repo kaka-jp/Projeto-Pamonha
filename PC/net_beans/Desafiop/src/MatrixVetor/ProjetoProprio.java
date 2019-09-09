@@ -32,6 +32,4 @@ public class ProjetoProprio {
         JOptionPane.showMessageDialog(null,"Pode comer apenas um deles: \n\n"+x+"\nComida que você gostaria de comer: "+a);
        
     }      
-        
 }
-    
