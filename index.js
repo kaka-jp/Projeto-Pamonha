@@ -3,7 +3,7 @@ var D = require('discord.js')
 var client = new D.Client();
 
 
-let ip = "CantinhodoWifi.aternos.me";
+let ip = "PamonhaW.aternos.me";
 let username = "Pamonha";
 let ver = "1.15.2";
 var bot = mineflayer.createBot({
@@ -34,3 +34,4 @@ client.login('NzYzMDM5OTg5Nzc2NTE1MTAy.X3x6Xg.tbBjhdmS0djs7JnrN8mjNEpUI3c')
 .catch(error => {
   console.log('cant login');
 })
+    
