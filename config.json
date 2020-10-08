@@ -1,0 +1,19 @@
+{
+    "minecraft":{
+        "serverIP" : "hub.dev-urandom.eu"
+    },
+
+    "discord": {
+        "token": "zYzMDM5OTg5Nzc2NTE1MTAy.X3x6Xg.tbBjhdmS0djs7JnrN8mjNEpUI3c",
+        "prefix": "."
+
+    },
+
+    "channels" : {
+        "serverchat": "763069270845947944"
+    }
+
+
+    }
+
+
