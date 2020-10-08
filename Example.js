@@ -1,8 +1,8 @@
 const mineflayer = require('mineflayer')
 
 const bot = mineflayer.createBot({
-  host: 'PamonhaW.aternos.me', // optional
-  port: 25565,       // optional
+  host: 'localhost', // optional
+  port: 58067,       // optional
   username: 'PamonhaExample', // email and password are required only for
   version: false                 // false corresponds to auto version detection (that's the default), put for example "1.8.8" if you need a specific version
 })
