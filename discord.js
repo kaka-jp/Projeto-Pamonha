@@ -3,7 +3,7 @@ var D = require('discord.js')
 var client = new D.Client();
 
 
-let ip = "PamonhaW.aternos.me";
+let ip = "mf.a68agaming.net";
 let username = "PamonhaDiscord";
 let ver = "1.15.2";
 var bot = mineflayer.createBot({

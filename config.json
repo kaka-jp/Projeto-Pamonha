@@ -1,21 +1,19 @@
 {
     "minecraft":{
-        "serverIP" : "hub.dev-urandom.eu",
+        "serverIP" : "PamonhaW.aternos.me",
         "port": 25565,
         "joinCMD": "/register"
     },
 
     "discord": {
-        "token": "zYzMDM5OTg5Nzc2NTE1MTAy.X3x6Xg.tbBjhdmS0djs7JnrN8mjNEpUI3c",
+        "token": "NzYzMDM5OTg5Nzc2NTE1MTAy.X3x6Xg.tbBjhdmS0djs7JnrN8mjNEpUI3c",
         "prefix": "."
 
     },
 
-    "channels" : {
+    "channels" :{
         "serverchat": "763069270845947944"
     }
-
-
-    }
+}
 
 

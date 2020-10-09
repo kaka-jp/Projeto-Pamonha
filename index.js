@@ -1,22 +1,30 @@
-const { Message } = require('discord.js')
-const mineflayer = require('mineflayer')
-const acc = require("./bot.json")
-const config = require("./config.json")
+const Discord = require("discord.js");
+const mineflayer = require("mineflayer");
+const client = new Discord.Client();
 
-const bot = mineflayer.createBot({
-  host: config.minecraft.serverIP, // optional
-  port: 25565,
-  username: acc.minecraft.Username, // email and password are required only for
-  version: false                 // false corresponds to auto version detection (that's the default), put for example "1.8.8" if you need a specific version
+let prefix = ".";
+
+let bot = mineflayer.createBot({
+    version: "1.15.2",
+    host: "hub.dev-urandom.eu",
+    username: "Pamonha",
 })
 
-bot.on("login", () => {
-    console.log(`Logged in as ${bot.username} \nServer: ${config.minecraft.serverIP}\n\n`)
-    bot.chat (`${config.minecraft.joinCMD}`)
-
-})  
-
-bot.on("message", async message =>{
-    let chat = message.toString()
-    console.log(chat)
+client.on("ready", async => {
+    console.log("Bot Online")
 })
+
+bot.on("login", async => {
+    console.log("Ingame Bot Online")
+    bot.chat("/register")
+})
+
+
+bot.on("message", message => {
+    let channel = client.channels.cache.get("763069270845947944")
+    if (!channel) return;
+    
+    channel.send(`${message}`)
+})
+
+client.login("NzYzMDM5OTg5Nzc2NTE1MTAy.X3x6Xg.tbBjhdmS0djs7JnrN8mjNEpUI3c")

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kaka-jp/Projeto-Pamonha#readme",
   "dependencies": {
+    "discord": "^0.8.2",
     "discord.js": "^12.3.1",
     "minecraft-data": "^2.69.1",
     "mineflayer": "^2.29.1",
