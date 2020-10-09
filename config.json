@@ -1,6 +1,8 @@
 {
     "minecraft":{
-        "serverIP" : "hub.dev-urandom.eu"
+        "serverIP" : "hub.dev-urandom.eu",
+        "port": 25565,
+        "joinCMD": "/register"
     },
 
     "discord": {
