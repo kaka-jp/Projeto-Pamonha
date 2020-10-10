@@ -4,7 +4,7 @@ const GoalFollow = goals.GoalFollow
 const GoalBlock = goals.GoalBlock
 
 const bot = mineflayer.createBot({
-    host: 'PamonhaW.aternos.me',
+    host: 'localhost',
     port: 25565,
     username: 'pathfinder_Bot'
 })
