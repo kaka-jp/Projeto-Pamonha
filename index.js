@@ -1,19 +1,24 @@
 const Discord = require("discord.js");
 const mineflayer = require("mineflayer");
 const client = new Discord.Client();
+const config = require("./config.json");
 
 //let prefix = ".";
+
+let token = config.token;
+
 
 let sending = false;
 let chatData = []
 
 let bot = mineflayer.createBot({
+    host: `${config.serverip}`,
+    port: `${config.port}`,
+    username: `${config.username}`,
     version: "1.15.2",
-    host: "hub.dev-urandom.eu",
-    //host:"localhost",
-    //port: 49518,
-    username: "Kurihara_P",
 })
+
+
 
 client.on("ready", async => {
     console.log("Bot Online")
@@ -29,8 +34,6 @@ bot.on("message", message => {
     if(sending == true) {
         chatData.push(`${message}`)
     }
-
-
 
 
     let channel = client.channels.cache.get("763069270845947944")
@@ -69,4 +72,4 @@ client.on("message", async msg => {
 
 })
 
-client.login("NzYzMDM5OTg5Nzc2NTE1MTAy.X3x6Xg.tbBjhdmS0djs7JnrN8mjNEpUI3c")
+client.login(token)
