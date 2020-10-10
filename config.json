@@ -1,6 +1,19 @@
 {
-    "token": "NzYzMDM5OTg5Nzc2NTE1MTAy.X3x6Xg.tbBjhdmS0djs7JnrN8mjNEpUI3c",
-    "username": "Kurihara_P",
-    "serverip": "hub.dev-urandom.eu",
-    "port": 25565
+    "minecraft":{
+        "serverIP" : "PamonhaW.aternos.me",
+        "port": 25565,
+        "joinCMD": "/register"
+    },
+
+    "discord": {
+        "token": "NzYzMDM5OTg5Nzc2NTE1MTAy.X3x6Xg.tbBjhdmS0djs7JnrN8mjNEpUI3c",
+        "prefix": "."
+
+    },
+
+    "channels" :{
+        "serverchat": "763069270845947944"
+    }
 }
+
+
