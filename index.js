@@ -2,6 +2,10 @@ const Discord = require("discord.js");
 const mineflayer = require("mineflayer");
 const client = new Discord.Client();
 const config = require("./config.json");
+const mineflayerViewer = require('prismarine-viewer').mineflayer
+const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
+const GoalFollow = goals.GoalFollow
+const GoalBlock = goals.GoalBlock
 
 
 
@@ -10,11 +14,11 @@ let chatData = []
 
 let bot = mineflayer.createBot({
     version: "1.15.2",
-    host: "to.play-ml.ru",
+    //host: "to.play-ml.ru",
     //host: "hub.dev-urandom.eu",
     //username: "Pamonha",
-    //host:"localhost",
-    //port: 49518,
+    host:"localhost",
+    port: 54365,
     username: "Kurihara_P",
 })
 
@@ -22,7 +26,6 @@ let bot = mineflayer.createBot({
 
 client.on("ready", async => {
     console.log("Bot Online")
-    bot.chat("/login biluteteia")
 })
 
 bot.on("ready", async => {
@@ -37,10 +40,10 @@ bot.on("message", message => {
     }
 
 
-    let channel = client.channels.cache.get("763069270845947944")
-    if (!channel) return;
+    //let channel = client.channels.cache.get("763069270845947944")
+    //if (!channel) return;
     
-    channel.send(`${message}`)
+    //channel.send(`${message}`)
 })
 
 
@@ -75,3 +78,32 @@ client.on("message", async msg => {
 })
 
 client.login("NzYzMDM5OTg5Nzc2NTE1MTAy.X3x6Xg.tbBjhdmS0djs7JnrN8mjNEpUI3c")
+
+
+bot.once('spawn', () => {
+    mineflayerViewer(bot, { port: 54365, firstPerson: false })
+  })
+
+  bot.loadPlugin(pathfinder)
+
+function followPlayer() {
+    const playerCI = bot.players['Hue100']
+
+    if (!playerCI || !playerCI.entity) {
+        bot.chat("I can't see CI!")
+        return
+    }
+
+    const mcData = require('minecraft-data')(bot.version)
+    const movements = new Movements(bot, mcData)
+    movements.scafoldingBlocks = []
+
+    bot.pathfinder.setMovements(movements)
+
+    const goal = new GoalFollow(playerCI.entity, 1)
+    bot.pathfinder.setGoal(goal, true)
+}
+
+
+
+bot.once('spawn', followPlayer)
