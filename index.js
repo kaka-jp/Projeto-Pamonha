@@ -15,10 +15,9 @@ let chatData = []
 let bot = mineflayer.createBot({
     version: "1.15.2",
     //host: "to.play-ml.ru",
-    //host: "hub.dev-urandom.eu",
     //username: "Pamonha",
     host:"localhost",
-    port: 54365,
+    port: 58279,
     username: "Kurihara_P",
 })
 
@@ -40,10 +39,10 @@ bot.on("message", message => {
     }
 
 
-    //let channel = client.channels.cache.get("763069270845947944")
-    //if (!channel) return;
+    let channel = client.channels.cache.get("763069270845947944")
+    if (!channel) return;
     
-    //channel.send(`${message}`)
+    channel.send(`${message}`)
 })
 
 
@@ -81,7 +80,7 @@ client.login("NzYzMDM5OTg5Nzc2NTE1MTAy.X3x6Xg.tbBjhdmS0djs7JnrN8mjNEpUI3c")
 
 
 bot.once('spawn', () => {
-    mineflayerViewer(bot, { port: 54365, firstPerson: false })
+    mineflayerViewer(bot, { port: 58279, firstPerson: false })
   })
 
   bot.loadPlugin(pathfinder)

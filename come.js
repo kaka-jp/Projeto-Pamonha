@@ -20,6 +20,8 @@ bot.once('spawn', () => {
   // Once we've spawn, it is safe to access mcData because we know the version
   const mcData = require('minecraft-data')(bot.version)
 
+  const playerCI = bot.players['Hue100']
+
   // We create different movement generators for different type of activity
   const defaultMove = new Movements(bot, mcData)
 
@@ -32,12 +34,13 @@ bot.once('spawn', () => {
     console.log('Here I am !')
   })
 
-  
+
+
 
   bot.on('chat', (username, message) => {
     if (username === bot.username) return
 
-    const target = bot.players[username] ? bot.players[username].entity : null
+
     if (message === 'come') {
       if (!target) {
         bot.chat('I don\'t see you !')
