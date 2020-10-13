@@ -4,18 +4,19 @@ const client = new Discord.Client();
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
 const GoalFollow = goals.GoalFollow
 const GoalBlock = goals.GoalBlock
+const config = require("./config.json")
 
 
 
 let sending = false;
 let chatData = []
+let token = config.token;
 
 let bot = mineflayer.createBot({
-    version: "1.15.2",
     //host: "to.play-ml.ru",
     //username: "Pamonha",
-    host:"Hue100.aternos.me",
-    port: 25565,
+    host:`${config.host}`,
+    port: `${config.port}`,
     username: "Kurihara_P",
 })
 
@@ -74,7 +75,7 @@ client.on("message", async msg => {
 
 })
 
-client.login("NzYzMDM5OTg5Nzc2NTE1MTAy.X3x6Xg.zJxQ51EIy11ml48VA0I6UfDSSIs")
+client.login(token)
 
 
 

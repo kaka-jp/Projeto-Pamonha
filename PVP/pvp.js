@@ -1,12 +1,13 @@
 const mineflayer = require('mineflayer')
+const config = require("./config.json")
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
 const pvp = require('mineflayer-pvp').plugin
 
+
 const bot = mineflayer.createBot({
-  host: 'Hue100.aternos.me', // optional
-  port: 25565,       // optional
-  username: 'PamonhaTeste', // email and password are required only for
-  version: false                 // false corresponds to auto version detection (that's the default), put for example "1.8.8" if you need a specific version
+  host: `${config.host}`, // optional
+  port: `${config.port}`,       // optional
+  username: 'PamonhaPvp', // email and password are required only for
 })
 
 bot.loadPlugin(pvp)
@@ -16,7 +17,7 @@ bot.loadPlugin(pathfinder)
 
 
 bot.on('chat', (username, message) => {
-  if (message === 'fight me') {
+  if (message === 'go') {
     const player = bot.players[username]
 
     if (!player) {
