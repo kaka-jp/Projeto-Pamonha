@@ -1,12 +1,11 @@
 const mineflayer = require('mineflayer')
-const config = require("./config.json")
 const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
 const pvp = require('mineflayer-pvp').plugin
-
+const config = require("./config.json")
 
 const bot = mineflayer.createBot({
   host: `${config.host}`, // optional
-  port: `${config.port}`,       // optional
+  //port:`${config.port}`,       // optional
   username: 'PamonhaPvp', // email and password are required only for
 })
 

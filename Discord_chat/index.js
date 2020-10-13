@@ -1,9 +1,6 @@
 const Discord = require("discord.js");
 const mineflayer = require("mineflayer");
 const client = new Discord.Client();
-const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
-const GoalFollow = goals.GoalFollow
-const GoalBlock = goals.GoalBlock
 const config = require("./config.json")
 
 
@@ -13,11 +10,9 @@ let chatData = []
 let token = config.token;
 
 let bot = mineflayer.createBot({
-    //host: "to.play-ml.ru",
-    //username: "Pamonha",
     host:`${config.host}`,
     port: `${config.port}`,
-    username: "Kurihara_P",
+    username: "Kurihara_P"
 })
 
 
@@ -48,7 +43,7 @@ bot.on("message", message => {
 client.on("message", async msg => {
     let args = msg.content.split(" ").slice(1)
 
-    if (msg.content.startsWith(".runcmd")) {
+    if (msg.content.startsWith(".t")) {
         let toSend = args.join(" ");
         if(!toSend) return msg.reply("No Args")
 
@@ -77,28 +72,3 @@ client.on("message", async msg => {
 
 client.login(token)
 
-
-
-  bot.loadPlugin(pathfinder)
-
-function followPlayer() {
-    const playerCI = bot.players['Hue100']
-
-    if (!playerCI || !playerCI.entity) {
-        bot.chat("I can't see CI!")
-        return
-    }
-
-    const mcData = require('minecraft-data')(bot.version)
-    const movements = new Movements(bot, mcData)
-    movements.scafoldingBlocks = []
-
-    bot.pathfinder.setMovements(movements)
-
-    const goal = new GoalFollow(playerCI.entity, 1)
-    bot.pathfinder.setGoal(goal, true)
-}
-
-
-
-bot.once('spawn', followPlayer)

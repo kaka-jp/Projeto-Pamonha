@@ -159,7 +159,7 @@ bot.on('entityGone', (entity) => {
 
         if (!guardMode) {
             setTimeout(() => {
-                bot.chat('I won.')
+                bot.chat('gg')
             }, 1000)
         }
     }
@@ -170,7 +170,7 @@ bot.on('death', () => {
 
     if (!guardMode) {
         setTimeout(() => {
-            bot.chat('I lost...')
+            bot.chat('oof')
         }, 1000)
     }
 })

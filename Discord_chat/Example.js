@@ -1,17 +1,90 @@
-const mineflayer = require('mineflayer')
+const Discord = require("discord.js");
+const mineflayer = require("mineflayer");
+const client = new Discord.Client();
+const { pathfinder, Movements, goals } = require('mineflayer-pathfinder')
+const GoalFollow = goals.GoalFollow
+const GoalBlock = goals.GoalBlock
+const config = require("./config.json")
 
-const bot = mineflayer.createBot({
-  host: 'localhost', // optional
-  port: 58067,       // optional
-  username: 'PamonhaExample', // email and password are required only for
-  version: false                 // false corresponds to auto version detection (that's the default), put for example "1.8.8" if you need a specific version
+
+
+let sending = false;
+let chatData = []
+let token = config.token;
+
+let bot = mineflayer.createBot({
+    //host: "to.play-ml.ru",
+    //username: "Pamonha",
+    host:`${config.host}`,
+    port: `${config.port}`,
+    username: "123bot",
 })
 
-bot.on('chat', function (username, message) {
+
+
+client.on("ready", async => {
+    console.log("Bot Online")
+})
+
+bot.on("ready", async => {  
+    console.log("Ingame Bot Online")
+})
+
+bot.on('chat', (username, message) => {
   if (username === bot.username) return
-  bot.chat(message)
+
+
+  if (message === 'Bekira no fuchi ni nami sawagi ') {
+      bot.chat('Bekira no fuchi ni nami sawagi')
+    
+    }
+
+  })
+
+bot.on("message", message => {
+
+    if(sending == true) {
+        chatData.push(`${message}`)
+    }
+
+
+    let channel = client.channels.cache.get("763069270845947944")
+    if (!channel) return;
+    
+    channel.send(`${message}`)
 })
 
-// Log errors and kick reasons:
-bot.on('kicked', (reason, loggedIn) => console.log(reason, loggedIn))
-bot.on('error', err => console.log(err))
+
+client.on("message", async msg => {
+    let args = msg.content.split(" ").slice(1)
+
+    if (msg.content.startsWith(".runcmd")) {
+        let toSend = args.join(" ");
+        if(!toSend) return msg.reply("No Args")
+
+        bot.chat(toSend)
+        sending = true
+        msg.channel.send(`${msg.author.tag} just sent ${toSend}`)
+
+
+        setTimeout(() => {
+            sending = false
+            msg.channel.send(chatData.join("\n"))
+            chatData = []
+
+        }, 750)
+
+
+
+
+
+
+    }
+
+
+
+})
+
+client.login(token)
+
+  
