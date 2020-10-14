@@ -159,7 +159,7 @@ bot.on('entityGone', (entity) => {
 
         if (!guardMode) {
             setTimeout(() => {
-                bot.chat('gg')
+                bot.chat('I win')
             }, 1000)
         }
     }
